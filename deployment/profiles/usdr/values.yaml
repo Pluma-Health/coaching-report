@@ -1,0 +1,18 @@
+container:
+  image:
+    repository: 510467250861.dkr.ecr.us-west-2.amazonaws.com
+    tag: ${workflow.variables.Dockertag}
+
+newrelic:
+  labels: null 
+
+ingress_external:
+  host: manifest_not_included_in_this_profile
+
+ingress_restricted:
+  host: usw2-prod-coaching-report.percipio.com
+
+virtualservice_restricted:
+  host: usw2-prod-coaching-report.percipio.com
+c_data_env_DEV_LD_CLIENTSIDE_ID: '6193cac8e6fcb91547c5829b'
+c_data_env_PROD_LD_CLIENTSIDE_ID: '6193cac8e6fcb91547c5829c'
