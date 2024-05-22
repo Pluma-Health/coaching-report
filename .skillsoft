@@ -1,0 +1,13 @@
+#DOCUMENTATION: https://skillsoftdev.atlassian.net/wiki/spaces/devops/pages/3363799041/Service+Source+of+Truth+-+The+new+.skillsoft+file
+harnessServiceName: coaching-report
+healthCheckAll: true
+healthCheckAllUser: coaching-report-username-${env.name}
+healthCheckAllPassword: coaching-report-password-${env.name}
+includeCDTests: [UI,BFF,BE]
+newRelicAppName: coaching-report
+podAnnotations:
+  jiraKey: APO
+  repo: https://github.skillsoft.com/Pluma-Health/coaching-report
+  squad: APO
+runCDTests: false
+slackNotificationChannel: APO-squad
