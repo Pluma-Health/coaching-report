@@ -1,0 +1,43 @@
+{
+  "name": "coaching-report",
+  "version": "0.0.1",
+  "description": "This service will be used for generating PDF template.",
+  "main": "index.js",
+  "scripts": {
+    "start": "per-env",
+    "start:development": "nodemon index",
+    "start:production": "PORT=8080 node index",
+    "test": "npm run test:pipeline",
+    "test:dev": "ava",
+    "test:pipeline": "mkdir -p test-results; ava --tap | tap-junit > test-results/TEST-results.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "author": "Pluma-Health",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "nodemon": "^2.0.7",
+    "tap-junit": "^5.0.2"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-async-wrap": "^1.0.0",
+    "per-env": "^1.0.2",
+    "swagger-jsdoc": "^3.2.9",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "ava": {
+    "files": [
+      "**/__tests__/**.js"
+    ],
+    "failFast": true,
+    "verbose": true,
+    "require": [
+      "esm"
+    ]
+  }
+}
