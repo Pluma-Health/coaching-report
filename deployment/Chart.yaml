@@ -1,0 +1,5 @@
+apiVersion: v2
+name: coaching-report
+description: This service will be used for generating PDF template.
+type: application
+version: 0.0.1
