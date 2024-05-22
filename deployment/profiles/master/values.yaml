@@ -1,0 +1,16 @@
+newrelic:
+  labels: 'Environment:AWS-Master;Team:Pluma-Health;Service:coaching-report'
+
+ingress_external:
+  enabled: false
+  host: coaching-report.master.squads-dev.com
+
+ingress_restricted:
+  enabled: true
+  host: coaching-report.master.squads-dev.com
+
+virtualservice_restricted:
+  enabled: false
+  host: use1-master-coaching-report.percipio.com
+c_data_env_DEV_LD_CLIENTSIDE_ID: '6193cac8e6fcb91547c5829b'
+c_data_env_PROD_LD_CLIENTSIDE_ID: '6193cac8e6fcb91547c5829c'
